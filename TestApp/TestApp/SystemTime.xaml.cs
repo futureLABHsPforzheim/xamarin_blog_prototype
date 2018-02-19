@@ -1,0 +1,30 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
+
+namespace TestApp
+{
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class SystemTime : ContentPage , INotifyPropertyChanged
+    {
+        DateTime dateTime;
+        public event PropertyChangedEventHandler PropertyChanged2;
+        public SystemTime()
+        {
+            
+            InitializeComponent();
+           
+        }
+
+
+       
+
+    }
+}

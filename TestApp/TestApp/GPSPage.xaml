@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestApp.GPSPage"
+             xmlns:local="clr-namespace:TestApp"
+             Title="GPS" Icon="ic_settings_input_antenna.png">
+
+    <ContentPage.BindingContext>
+        <local:ViewModel />
+    </ContentPage.BindingContext>
+
+
+    <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+        <Button Text="GPS"
+                Command="{Binding getLocationAsyncCommand}">
+        </Button>
+
+        <Label Text="{Binding Longitude}"
+         FontSize="Large"
+         HorizontalOptions="Center"
+         VerticalOptions="Center">
+        </Label>
+
+        <Label Text="{Binding Latitude}"
+         FontSize="Large"
+         HorizontalOptions="Center"
+         VerticalOptions="Center">
+        </Label>
+        
+    </StackLayout>
+</ContentPage>
